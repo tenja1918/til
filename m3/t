@@ -1,0 +1,18 @@
+	.ac-article_overview_saleslist table tbody td:before {
+		content: attr(data-label);
+		float: left;
+		background-color: blue;
+		color: white;
+		font-weight: bold;
+		margin-right:.25rem;
+		padding-left: .5rem;
+		padding-right: .5rem;
+		width: 40%;
+		height: 5rem;
+	}
+
+    .ac-article_overview_saleslist table tbody td[data-label] {
+    	padding: unset;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+    }
