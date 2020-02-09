@@ -1,0 +1,27 @@
+	.ac-article_overview_saleslist table tbody td:before {
+		content: attr(data-label);
+		float: left;
+		background-color: #222c81;
+		color: white;
+		font-weight: normal;
+		margin-right:.25rem;
+		padding-left: .5rem;
+		padding-right: .5rem;
+		text-align: center;
+		margin-bottom: .5em;
+		width: 40%;
+		/*height: 5rem;*/
+		/*line-height: 1.5;*/
+		/* white-space:nowrap; */
+	}
+
+    .ac-article_overview_saleslist table tbody td[data-label] {
+    	padding: unset;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		/*height: auto;*/
+    }
+
+    .ac-article_overview_saleslist table tbody td[data-label]:nth-child(odd) {
+    	clear: left;
+    }
