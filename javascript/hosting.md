@@ -40,6 +40,6 @@ f();        // x= undefined
 ```
 
 ### 参考サイト
-https://qiita.com/39_isao/items/d9d80e98b5bd1938bc1d
-https://teratail.com/questions/189421
-https://www.ecma-international.org/ecma-262/9.0/index.html#sec-let-and-const-declarations
+* https://qiita.com/39_isao/items/d9d80e98b5bd1938bc1d
+* https://teratail.com/questions/189421
+* https://www.ecma-international.org/ecma-262/9.0/index.html#sec-let-and-const-declarations
