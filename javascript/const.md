@@ -1,7 +1,7 @@
 # JavaScript. var / let / const
 
 ## const
-* ES6以上が必要
+* ES6(ES2015)以上が必要
 * 再宣言、再代入が不可能
   * 再宣言は定義時にエラーになる
   * 再代入は実行時にエラーになる
@@ -32,7 +32,7 @@ function fnconst() {
     const y = 'a';
   }
   console.log(y);     // ReferenceError! y is not defined.
-};
+}
 
 // 関数スコープ。別関数からは見えない
 (function(){ console.log(x); })();    // ReferenceError! x is not defined.
@@ -47,4 +47,4 @@ obj = { tel: '000-1234-5678' };   // TypeError! Assignment to constant variable.
 ```
 
 ### 参考サイト
-https://qiita.com/wannabe/items/b2a0d63fc786eab13c48
+* https://qiita.com/wannabe/items/b2a0d63fc786eab13c48
