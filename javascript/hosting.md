@@ -1,8 +1,8 @@
 # JavaScript. 巻き上げ(hosting)について
 
 ### varとlet/constの違い
-* var ... 関数内でvarで変数宣言をした場合、関数内のvar変数をすべてundefinedで初期化する
-* let / const ... 関数内でlet/constで変数/定数宣言をした場合、関数内のlet変数const定数をすべて未初期化にする
+* var ... 関数内でvarで変数宣言をした場合、関数の先頭で関数内のvar変数をすべてundefinedで初期化する
+* let / const ... 関数内でlet/constで変数/定数宣言をした場合、関数の先頭で関数内のlet変数const定数をすべて未初期化にする
 * strictモードでの例
 
 ---
@@ -39,8 +39,8 @@ let y = 0;
 function f() {
   console.log('x=', x);
   console.log('y=', y);
-  var x = 1;
-  let y = 2;
+  var x = 1;      // ここが違う
+  let y = 2;      // ここが違う
 }
 
 f();        // x= undefined
