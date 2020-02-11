@@ -1,7 +1,7 @@
 # JavaScript. var / let / const
 
 ## let
-* ES6以上が必要
+* ES6(ES2015)以上が必要
 * 再宣言が不可能
   * 再宣言は定義時にエラーになる
 * 再代入は可能
@@ -32,11 +32,11 @@ function fnlet() {
     let y = 'a';
   }
   console.log(y);     // ReferenceError! y is not defined.
-};
+}
 
 // 別関数からは見えない
 (function(){ console.log(x); })();    // ReferenceError! x is not defined.
 ```
 
 ### 参考サイト
-https://qiita.com/wannabe/items/b2a0d63fc786eab13c48
+* https://qiita.com/wannabe/items/b2a0d63fc786eab13c48
