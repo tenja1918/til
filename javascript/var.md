@@ -18,18 +18,12 @@ function fnvar() {
   x = 2;
   console.log(x);     // 2
   
-  // ブロックスコープではない1
+  // ブロックスコープではない
   {
     console.log(x);   // 2
     x = 3;
   }
   console.log(x);     // 3
-
-  // ブロックスコープではない2
-  {
-    var x = 4;
-  }
-  console.log(x);     // 4
 
   // 関数スコープ。ブロック内で宣言した変数でも、外側で利用可能
   {
