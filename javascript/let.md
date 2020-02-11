@@ -36,3 +36,6 @@ function fnlet() {
 // 別関数からは見えない
 (function(){ console.log(x); })();    // ReferenceError! x is not defined.
 ```
+
+### 参考サイト
+https://qiita.com/wannabe/items/b2a0d63fc786eab13c48
