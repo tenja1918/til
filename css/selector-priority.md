@@ -46,7 +46,7 @@ p { color: green; }
 p.nice.red.text { color: red; }
 ```
 
-なお`.nice.red.text`と`.nice .red .text`は意味が異なるため注意。
+なお`.nice.red.text`と`.nice .red .text`は意味が異なるため注意。  
 （前者はnice, red, textの3つのclass指定があるもの。後者はniceの子孫でredの子孫でtextのclass指定があるもの）
 
 
