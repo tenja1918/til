@@ -43,8 +43,12 @@ p { color: green; }
 #blue p { color: blue; }
 
 /* 0.0.3.1 ... p=要素名(0.0.0.1) + .nice=クラス(0.0.1.0) + .red=クラス(0.0.1.0) + .text=クラス(0.0.1.0) */ 
-p .nice .red .text { color: red; }
+p.nice.red.text { color: red; }
 ```
+
+なお`.nice.red.text`と`.nice .red .text`は意味が異なるため注意。
+（前者はnice, red, textの3つのclass指定があるもの。後者はniceの子孫でredの子孫でtextのclass指定があるもの）
+
 
 ### 参考サイト
 https://qiita.com/oh_rusty_nail/items/e896825cd54e5c0a3666  
