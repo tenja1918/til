@@ -1,0 +1,95 @@
+	.ac-article_overview_saleslist table tbody td:before {
+		content: attr(data-label);
+		float: left;
+		background-color: #F6F6F6;
+		font-weight: bold;	/*boldでもいいけどfont-size変えたい*/
+		margin-right: 2px;
+		padding-left: .5rem;
+		padding-right: .5rem;
+		text-align: center;
+		width: 40%;
+		min-height: 4.5rem;
+	}
+
+    .ac-article_overview_saleslist table tbody td[data-label] {
+    	padding: unset;
+    	font-size: 12px;	/*font-size変えたい*/
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+    }
+
+    .ac-article_overview_saleslist table tbody td[data-label]:nth-child(odd) {
+    	clear: left;
+    }
+
+    div.colorbox.ac-article_overview_saleslist table.c-table {
+    	padding-left: .5rem;
+    	padding-right: .5rem;
+    }
+
+ユニークなクラス属性を入れ込むかどうかは要検討
+
+----------------------------------------------------------------------------------------------------
+間取り画像の下に、2列レイアウトで出したい場合
+----------------------------------------------------------------------------------------------------
+$(function() {
+	//changeTable($('.ac-article_overview_saleslist table'));
+	function changeTable($table){
+		$table.each(function(){
+			var $titletr = $(this).find('tr').eq(0);
+			if (window.matchMedia('screen and (max-width:640px)').matches) {
+				var $ths = $titletr.children().clone();
+				$titletr.nextAll().each(function(){
+					$(this).children().each(function(i){
+						$(this).before($ths.eq(i).clone());
+					})
+				});
+				$titletr.css({
+					'display':'none'
+				});
+			}
+		})
+	}
+	$('.js-outline_detail_popup').on('click',function(){
+		var $img = $('<img />').attr('src',$(this).data('popup_img'));
+		//var $ths = $('<tr />').append($(this).closest('table').find('tr:first').children('th').clone());
+		var $tds = $('<tr />').append($(this).closest('tr').children('td').clone()).append('<td data-label=""></td>');
+		//var $table = $('<table class="c-table">').append($ths).append($tds);
+		var $table = $('<table class="c-table">').append($tds);
+		$table.find('.js-popup_column').remove();
+		//changeTable($table);
+		var html = '<div class="ac-article_overview_saleslist colorbox"><p class="tac"><img src="' + $(this).data('popup_img') + '"></p>' + $table.prop('outerHTML') + '</div>';
+
+
+
+----------------------------------------------------------------------------------------------------
+spanの場合
+----------------------------------------------------------------------------------------------------
+	.ac-article_overview_saleslist table tbody td > span {
+		display: inline-block;
+		float: left;
+		background-color: #F6F6F6;
+		font-weight: bold;
+		margin-right: 2px;
+		padding-left: .5rem;
+		padding-right: .5rem;
+		text-align: center;
+		width: 40%;
+		min-height: 4.5rem;
+	}
+
+    .ac-article_overview_saleslist table tbody td {
+    	padding: unset;
+    	font-size: 12px;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+    }
+
+    .ac-article_overview_saleslist table tbody td[data-label]:nth-child(odd) {
+    	clear: left;
+    }
+
+    div.colorbox.ac-article_overview_saleslist table.c-table {
+    	padding-left: .5rem;
+    	padding-right: .5rem;
+    }
