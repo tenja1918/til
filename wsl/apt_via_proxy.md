@@ -14,6 +14,9 @@
   Acquire::https::Proxy "http://proxy-server:port";
   ```
 
+認証が必要なプロキシの場合、以下のようにする。  
+`http://user:password@proxy-server:port`
+
 ---
 
 ### 参考
