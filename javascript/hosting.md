@@ -1,4 +1,4 @@
-# JavaScript. 巻き上げ(hosting)について
+# JavaScript. 巻き上げ(hoisting)について
 
 ### varとlet/constの違い
 * var ... 関数内でvarで変数宣言をした場合、関数の先頭で関数内のvar変数をすべてundefinedで初期化する
