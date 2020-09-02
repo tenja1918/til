@@ -42,7 +42,7 @@ const obj = { name: 'hogehoge' };
 obj.name = 'mekemeke';
 console.log(obj.name);            // mekemeke
 
-// オブジェクト地震は変更不可
+// オブジェクト自身は変更不可
 obj = { tel: '000-1234-5678' };   // TypeError! Assignment to constant variable.
 ```
 
