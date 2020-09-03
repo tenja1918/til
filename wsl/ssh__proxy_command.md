@@ -17,6 +17,8 @@ Ubuntu on WSL(Windows Subsystem for Linux)上のsshから、透過的にAWS EC2 
 ```
 
 ### 設定
+Ubuntu on WSLで、以下の設定をする。
+
 - ~/.ssh  
 パーミッションは700にする。オーナーは当然自分。
 
