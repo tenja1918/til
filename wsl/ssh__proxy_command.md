@@ -93,6 +93,9 @@ ssh dev-instance-A
 
 # ステージング環境のinstance-Bへ接続
 ssh stg-instance-B
+
+# scpもOK。しかもファイルパス補完も効くからすごい
+scp dev-instance-B:~/foo/bar/file ./dev-b-file
 ```
 
 ### SSHポートフォワードする場合
