@@ -73,9 +73,9 @@ Ubuntu on WSLで、以下の設定をする。
 
   Host stg-instance-B
     HostName 172.31.22.02
-```
+  ```
 
-- .bashrc
+- ~/.bashrc  
   認証が必要なSocks Proxyサーバーの場合、認証情報を環境変数に定義しておく。SOCKS5_USER, SOCKS5_PASSWD。
   ```bash
   export SOCKS5_USER='user-abc';
@@ -101,7 +101,7 @@ scp dev-instance-B:~/foo/bar/file ./dev-b-file
 ```
 
 ### SSHポートフォワードする場合
-ローカルポート222と、開発環境のinstance-Aのポート22をポートフォワードする。
+ローカルポート222と、開発環境のinstance-A(172.31.11.01)のポート22を、踏み台(10.20.30.40)を経由してポートフォワードする。
 ```sh
 # ワンライナーで手軽にやるには
 sudo SOCKS5_USER='user-abc' SOCKS5_PASSWD='password-xxx' \
